@@ -1,3 +1,4 @@
+import 'package:bloco_de_notas/screens/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -18,17 +19,7 @@ class MyApp extends StatelessWidget {
           Theme.of(context).textTheme,
         ),
       ),
-      home: Scaffold(
-        body: Container(
-          child: Center(
-              child: Text(
-            'Hello World!',
-            style: TextStyle(
-              fontSize: 32.0,
-            ),
-          )),
-        ),
-      ),
+      home: Homepage(),
     );
   }
 }

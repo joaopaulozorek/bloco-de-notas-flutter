@@ -17,7 +17,6 @@ class _HomepageState extends State<Homepage> {
           width: double.infinity,
           padding: EdgeInsets.symmetric(
             horizontal: 24.0,
-            vertical: 32.0,
           ),
           color: Color(0xFFF6F6F6),
           child: Stack(
@@ -26,24 +25,41 @@ class _HomepageState extends State<Homepage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    margin: EdgeInsets.only(bottom: 32),
+                    margin: EdgeInsets.only(
+                      bottom: 32,
+                      top: 32,
+                    ),
                     child: Image(
                       image: AssetImage('assets/images/logo.png'),
                     ),
                   ),
-                  TaskCardWidget(
-                    title: 'Get Started!',
-                    desc:
-                        'Olá! Este é um exemplo de anotação! Você pode editar ou excluir. Clique no botão (+) para adiciornar uma nova anotação,',
-                  ),
-                  TaskCardWidget(
-                    title: 'Unamed task',
-                    desc: 'Bla bla bla',
+                  Expanded(
+                    child: ListView(
+                      children: [
+                        TaskCardWidget(
+                          title: 'Get Started!',
+                          desc:
+                              'Olá! Este é um exemplo de anotação! Você pode editar ou excluir. Clique no botão (+) para adiciornar uma nova anotação,',
+                        ),
+                        TaskCardWidget(
+                          title: 'Unamed task',
+                          desc: 'Bla bla bla',
+                        ),
+                        TaskCardWidget(
+                          title: 'Unamed task',
+                          desc: 'Bla bla bla',
+                        ),
+                        TaskCardWidget(
+                          title: 'Unamed task',
+                          desc: 'Bla bla bla\nble ble ble\nbli bli bli',
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
               Positioned(
-                bottom: 0,
+                bottom: 24,
                 right: 0,
                 child: Container(
                   width: 60,
